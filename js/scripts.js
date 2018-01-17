@@ -1,14 +1,29 @@
+var grocerylist = [];
+
 $(document).ready(function() {
-  $("#blanks form").submit(function(event) {
-    var blanks = ["person1", "person2", "animal", "exclamation", "verb", "noun"];
-
-    blanks.forEach(function(blank) {
-      var userInput = $("input#" + blank).val();
-      $("." + blank).text(userInput);
-    });
-
-    $("#story").show();
-
+  $("div#groceries form#formOne").submit(function(event) {
     event.preventDefault();
+    var userInputs = ["grocery1", "grocery2", "grocery3"];
+
+    userInputs.forEach(function(formInputId) {
+      var groceryInputString = $("input#" + formInputId).val();
+
+      grocerylist.push(groceryInputString);
+    });
+    console.log(grocerylist);
+
+
   });
+
+  $("button#show").click(function() {
+    var upperArray = [];
+    grocerylist.map(function(item){upperArray.push(item.toUpperCase())})
+    upperArray.sort();
+    upperArray.forEach(function(grocery) {
+      $("#output").append(grocery + " ");
+    });
+    jQuery("#output").show();
+    $("div#groceries").hide();
+  });
+
 });

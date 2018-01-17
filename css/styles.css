@@ -1,7 +1,11 @@
-#story {
+
+#inputform {
+  display: inline;
+}
+#output {
   display: none;
 }
 
-#blanks form {
-  color: red;
+.buttons {
+  background-color: grey;
 }

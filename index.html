@@ -5,28 +5,37 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Make a grocery list</title>
+    <title>Grocery List</title>
   </head>
   <body>
-    <div class="container">
-      <h1>A grocery list</h1>
-      <div id="input">
-        <div class="form-group">
-          <label for="groceryitem">Input an item:</label>
-          <input id="groceryitem" class="form-control" type="text">
-        </div>
-
-        <button type="submit" class="btn">submit item</button>
-        <button type="show" class="btn">show list</button>
+    <div id="inputform">
+      <h1>Items to add</h1>
+      <div id="groceries">
+        <form id="formOne">
+          <div class="form-group">
+            <label for="grocery1">First grocery</label>
+            <input id="grocery1" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="grocery2">Another name</label>
+            <input id="grocery2" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="grocery3">Another name</label>
+            <input id="grocery3" class="form-control" type="text">
+          </div>
+          <button class="btn btn-success" id="submit">add 3 items</button>
         </form>
       </div>
-
-      <div id="story">
-        <h1>A fantastical adventure</h1>
-        <p>
-One day, <span class="person1"></span> and <span class="person2"></span> were walking through the woods, when suddenly a giant <span class="animal"></span> appeared. "<span class="exclamation"></span>", <span class="person1"></span> cried. The two of them <span class="verb"></span> as quickly possible, and when they were safe, <span class="person1"></span> and <span class="person2"></span> gave each other a giant <span class="noun"></span>.
-</p>
-      </div>
     </div>
+
+    <div class="buttons">
+      <button class="btn btn-success" id="show">show final list</button>
+    </div>
+
+    <div id="output">
+      <h1>Final List:</h1>
+    </div>
+
   </body>
 </html>
